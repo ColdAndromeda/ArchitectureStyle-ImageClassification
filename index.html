@@ -18,68 +18,69 @@ limitations under the License.
 <!doctype html>
 
 <head>
-  <title>Project Classification+X</title>
+  <title>Architecture Classification</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="shared/tfjs-examples.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Padyakke+Expanded+One&family=Trispace:wght@100;300;500&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="Imgs/Architecture-fav.png">
 </head>
 
-<style>
-  .pred-container {
-    margin-bottom: 20px;
-  }
-
-  .pred-container > div {
-    display: inline-block;
-    margin-right: 20px;
-    vertical-align: top;
-  }
-
-  .row {
-    display: table-row;
-  }
-  .cell {
-    display: table-cell;
-    padding-right: 20px;
-  }
-
-  #file-container {
-    margin-bottom: 20px;
-  }
-</style>
-
 <body>
-  <div class="tfjs-example-container">
-    <section class='title-area'>
-      <h1>Fruits and Veggies Classification</h1>
-    </section>
+  <div class="parallax">
+    <nav>
+      <ul>
+        <ul class="Title">Architecture Classification</ul>
+        <ul class="Description">25 categories of Architecture Styles</ul>
+  </div>
 
-    <section>
-      <img src="dataset.jpg" style="width: 50%;">
-      <p class='section-head'>Description</p>
-      <p>
-        We classify 9 categories of fruits and veggies. 
-      </p>
-    </section>
+  </nav>
+  </div>
 
-    <section>
-      <p class='section-head'>Status</p>
-      <div id="status"></div>
-    </section>
+  <!-- Bottom Part -->
+  <div class="container">
+    <div class="inner-container">
+      <div class="card-container">
+        <!--Make an container -->
+        <div class="uploadcard">
+          <div id="file-container">
+            <label for="files" class="custom-file-button">
+              <input type="file" id="files" name="files[]" multiple style="display: none;">
+              <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3 15C3 17.8284 3 19.2426 3.87868 20.1213C4.75736 21 6.17157 21 9 21H15C17.8284 21 19.2426 21 20.1213 20.1213C21 19.2426 21 17.8284 21 15"
+                  stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 16V3M12 3L16 7.375M12 3L8 7.375" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <p>Upload File</p>
+            </label>
+          </div>
+        </div>
 
-    <section>
-      <p class='section-head'>Model Output</p>
 
-      <div id="file-container" style="display: none">
-        Upload an image: <input type="file" id="files" name="files[]" multiple />
+        </card-container>
+
+        <div class="Output-Text">
+          <section class="bottom-status">
+            <div class="bottom-status-left">
+              <p class='section-head'>Model Output</p>
+              <div id="predictions"></div>
+            </div>
+            <div class="bottom-status-right">
+              <p class='section-head'>Status</p>
+              <div id="status"></div>
+            </div>
+          </section>
+        </div>
       </div>
 
-      <div id="predictions"></div>
-
-      <img style="display: none" id="cat" src="ai4all.jpg" width=224 height=224 />
-    </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.5.2"></script>
-    <script src="index.js"></script>
-  </div>
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.5.2"></script>
+      <script src="index.js"></script>
+    </div>
 </body>
